@@ -6,7 +6,7 @@ public class Producer extends Thread{
     }
 
     public void run(){
-        for (int i = 0; i<50; i++) {
+        for (int i = 0; i<10; i++) {
             synchronized (data) {                                               //for mutual exclusion (mutex)
                 data.value++;                                                   //Producer increase the value.
                 System.out.println("Producer's Data Value: " + data.value);

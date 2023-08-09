@@ -6,7 +6,7 @@ public class Consumer implements Runnable{
     }
 
     public void run(){
-        for (int i = 0; i<50; i++) {
+        for (int i = 0; i<10; i++) {
             synchronized (data){                                                //for mutual exclusion (mutex)
                 data.value--;                                                   //Consumer decrease the value.
                 System.out.println("Consumer's Data Value: " + data.value);
